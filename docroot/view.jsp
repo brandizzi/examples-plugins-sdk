@@ -5,9 +5,19 @@
 
 How do you like your coffe?
 
-<select name="<portlet:namespace/>coffePref">
+<select id="<portlet:namespace/>coffePref" name="<portlet:namespace/>coffePref">
 	<option value="black">Black</option>
 	<option value="sweet">Sweet</option>
 	<option value="milk">With milk</option>
 </select>
 
+<aui:script use="liferay-store">
+A.one('#<portlet:namespace/>coffePref').on(
+	'change',
+	function(event) {
+		var instance = this;
+
+		Liferay.Store('<portlet:namespace/>coffe-preference', instance.val());
+	}
+);
+</aui:script>
