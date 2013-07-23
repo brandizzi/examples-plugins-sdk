@@ -1,14 +1,20 @@
+<%@page import="com.liferay.portal.util.SessionClicks"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
 <portlet:defineObjects />
 
+<%
+String coffeePreference = SessionClicks.get(request, renderResponse.getNamespace() + "coffee-preference", "");
+%>
+
+
 How do you like your coffee?
 
 <select id="<portlet:namespace/>coffeePref" name="<portlet:namespace/>coffeePref">
-	<option value="black">Black</option>
-	<option value="sweet">Sweet</option>
-	<option value="milk">With milk</option>
+	<option value="black" <%= "black".equals(coffeePreference) ? "selected" : "" %>>Black</option>
+	<option value="sweet" <%= "sweet".equals(coffeePreference) ? "selected" : "" %>>Sweet</option>
+	<option value="milk"  <%= "milk".equals(coffeePreference) ? "selected" : "" %>>With milk</option>
 </select>
 
 <aui:script use="liferay-store">
