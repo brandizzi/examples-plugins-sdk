@@ -4,3 +4,4 @@ docroot/WEB-INF/classes
 \.project
 lib
 tools
+build.*.properties
