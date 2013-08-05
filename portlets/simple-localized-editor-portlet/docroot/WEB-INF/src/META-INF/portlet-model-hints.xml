@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.examples.localizededitor.model.Post">
+		<field name="postId" type="long" />
+		<field name="title" type="String" localized="true" />
+		<field name="content" type="String" localized="true" />
+	</model>
+</model-hints>
