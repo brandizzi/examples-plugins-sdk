@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.liferay.examples.localizededitor">
+	<author>adam</author>
+	<namespace>LocalizedEditor</namespace>
+
+	<entity name="Post" local-service="true" remote-service="false">
+		<column name="postId" type="long" primary="true" />
+
+		<column name="title" type="String" localized="true" />
+		<column name="content" type="String" localized="true" />
+	</entity>
+</service-builder>
