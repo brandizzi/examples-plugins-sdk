@@ -1,0 +1,8 @@
+*/*/docroot/WEB-INF/classes
+*/*/.projectdocroot/WEB-INF/classes
+\.classpath
+\.settings
+\.project
+lib
+tools
+build.*.properties
